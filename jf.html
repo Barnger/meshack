@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="jc.css">
+	<link rel="stylesheet" href="fc.css">
+	<link rel="stylesheet" href="pc.css">
+</head>
+<body>
+    <nav class="vertical-nav">
+        <ul>
+            <li><a href="URBAN LOFT.html">Home</a></li>
+			<li><a href="af.html">About Us</a></li>
+            <li><a href="sf.html">Shop</a></li>
+            <li><a href="cf.html">Cart</a></li>
+            <li><a href="pf.html">Payment</a></li>
+            <li><a href="jf.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Contact Us</h1>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+        <button id="feedbackButton" class="floating-button">View Feedback</button>
+        <div id="feedbackSection" class="feedback-section">
+            <h2>Customer Feedback</h2>
+            <p>No feedback available yet.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 urban loft furniture store. All rights reserved.</p>
+    </footer>
+    <script src="jj.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    background-image: url('img/0.02.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* Style for the container */
+.container {
+    display: block;
+    grid-template-columns: 1fr 3fr; /* 1 part header, 3 parts products */
+    grid-template-rows: auto 1fr auto; /* auto height for header, 1fr for products, auto height for footer */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Style for the header */
+.header {
+    grid-column: 1 / 2; /* Span from column 1 to column 2 */
+    grid-row: 1 / 3; /* Span from row 1 to row 3 */
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-right: 2px solid #ccc;
+}
+
+.vertical-nav {
+    width: 100px;
+    background-color: rgba(2, 2, 2, 0.9);
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.vertical-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.vertical-nav ul li {
+    margin-bottom: 1rem;
+}
+
+.vertical-nav ul li a {
+    text-decoration: none;
+    color: #ddd;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.vertical-nav ul li a:hover {
+    background-color: #ddd;
+}
+
+main {
+    margin-left: 200px; /* Adjust margin to account for the width of the vertical nav */
+    padding: 2rem;
+    flex: 1;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: rgba(224, 224, 224, 0.1); /* Semi-transparent background */
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hero h2 {
+    margin-bottom: 1rem;
+}
+
+/* Style for the product area */
+.products {
+    grid-column: 2 / 3; /* Span from column 2 to column 3 */
+    grid-row: 1 / 2; /* Span from row 1 to row 2 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* Style for individual product */
+.product {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 0 1 calc(33.333% - 20px); /* Adjusts the width and spacing of the products */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    display: inline;
+    margin: 0 auto 1rem;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cart { 
+	margin: 2rem 0; 
+} 
+
+.cart-item { 
+	border-bottom: 1px solid #ff0000;
+	padding: 1rem 0; 
+} 
+
+.cart-item img { 
+	max-width: 100px; 
+	height: auto; 
+	display: block; 
+	margin: 0 auto; 
+} 
+
+.total { 
+	text-align: right; 
+	margin-top: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Style for the footer */
+.footer {
+    grid-column: 1 / 3; /* Span from column 1 to column 3 */
+    grid-row: 3 / 4; /* Span from row 3 to row 4 */
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-top: 2px solid #ccc;
+    text-align: center;
+}
